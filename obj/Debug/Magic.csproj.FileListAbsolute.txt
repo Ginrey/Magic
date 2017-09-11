@@ -1,0 +1,5 @@
+D:\Дополнения\Прочие\Исходники C#\Magic\bin\Debug\Magic.pdb
+D:\Дополнения\Прочие\Исходники C#\Magic\obj\Debug\Magic.csprojResolveAssemblyReference.cache
+D:\Дополнения\Прочие\Исходники C#\Magic\obj\Debug\Magic.pdb
+D:\Дополнения\Прочие\Исходники C#\Magic\bin\Debug\Magic.exe
+D:\Дополнения\Прочие\Исходники C#\Magic\obj\Debug\Magic.exe

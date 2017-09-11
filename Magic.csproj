@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B704AA91-689A-4FB4-99CF-56619D784A93}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Magic</RootNamespace>
+    <AssemblyName>Magic</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\AccountInfo.cs" />
+    <Compile Include="Data\ConnectionData.cs" />
+    <Compile Include="Data\DataBlock.cs" />
+    <Compile Include="Data\ConnectionInfo.cs" />
+    <Compile Include="Data\Types\FriendForm.cs" />
+    <Compile Include="Data\Types\GBattleChallenge.cs" />
+    <Compile Include="Data\Types\GRoleBase.cs" />
+    <Compile Include="Data\Types\EquipInfo.cs" />
+    <Compile Include="Data\Types\GRoleForbid.cs" />
+    <Compile Include="Data\Types\GGuildBase.cs" />
+    <Compile Include="Data\Types\GRoleInventory.cs" />
+    <Compile Include="Data\Types\HpMp.cs" />
+    <Compile Include="Data\Types\MapId.cs" />
+    <Compile Include="Data\Types\NpcWorldInfo.cs" />
+    <Compile Include="Data\Types\PShopBase.cs" />
+    <Compile Include="Data\Types\PShopEntry.cs" />
+    <Compile Include="Data\Types\PShopItem.cs" />
+    <Compile Include="Data\Types\RoleWorldInfo.cs" />
+    <Compile Include="Data\Types\RoleInfo.cs" />
+    <Compile Include="Data\Types\RoleStatsInfo.cs" />
+    <Compile Include="Data\Types\Gender.cs" />
+    <Compile Include="Data\Types\GuildStatus.cs" />
+    <Compile Include="Data\Types\Occupation.cs" />
+    <Compile Include="Data\Types\Point3F.cs" />
+    <Compile Include="Data\Types\ServerVersion.cs" />
+    <Compile Include="Data\Types\UnixTime.cs" />
+    <Compile Include="Data\Types\WorldObject.cs" />
+    <Compile Include="Data\WorldObjectsSet.cs" />
+    <Compile Include="IO\BigEndianConverter.cs" />
+    <Compile Include="IO\DataSerializer.cs" />
+    <Compile Include="IO\DataStream.cs" />
+    <Compile Include="IO\EndianBitConverter.cs" />
+    <Compile Include="IO\Endianness.cs" />
+    <Compile Include="Net\Connection.cs" />
+    <Compile Include="Net\Packets\Client\BattleChallengeMapC1E.cs" />
+    <Compile Include="Net\Packets\Client\BattleChallengeMapC356.cs" />
+    <Compile Include="Net\Packets\Client\ChatBroadCastC78.cs" />
+    <Compile Include="Net\Packets\Client\CMKeyC02.cs" />
+    <Compile Include="Net\Packets\Client\CMKeyC03.cs" />
+    <Compile Include="Net\Packets\Client\CreateRoleC54.cs" />
+    <Compile Include="Net\Packets\Client\DebugAddCashC209.cs" />
+    <Compile Include="Net\Packets\Client\DebugCommandC369.cs" />
+    <Compile Include="Net\Packets\Client\EnterWorldC48.cs" />
+    <Compile Include="Net\Packets\Client\FriendFormRefreshC3B7.cs" />
+    <Compile Include="Net\Packets\Client\GetGuildBaseInfoC12CE.cs" />
+    <Compile Include="Net\Packets\Client\GetInventoryC27.cs" />
+    <Compile Include="Net\Packets\Client\GetRoleIdByNameC76.cs" />
+    <Compile Include="Net\Packets\Client\GuildMessageC12C3.cs" />
+    <Compile Include="Net\Packets\Client\KeepAliveC5A.cs" />
+    <Compile Include="Net\Packets\Client\LogginAnnounceC02.cs" />
+    <Compile Include="Net\Packets\Client\LogginAnnounceC03.cs" />
+    <Compile Include="Net\Packets\Client\GetRoleBaseInfoC5B.cs" />
+    <Compile Include="Net\Packets\Client\LogoutC01.cs" />
+    <Compile Include="Net\Packets\Client\OpenNpcDialogC23.cs" />
+    <Compile Include="Net\Packets\Client\PrivateChatC60.cs" />
+    <Compile Include="Net\Packets\Client\PShopListC39E.cs" />
+    <Compile Include="Net\Packets\Client\PShopPlayerGetC39C.cs" />
+    <Compile Include="Net\Packets\Client\ResetTargetC08.cs" />
+    <Compile Include="Net\Packets\Client\RoleListC52.cs" />
+    <Compile Include="Net\Packets\Client\SearchFriendsRequestC3BA.cs" />
+    <Compile Include="Net\Packets\Client\SelectRoleC46.cs" />
+    <Compile Include="Net\Packets\Client\SetNewFriendFormC3B9.cs" />
+    <Compile Include="Net\Packets\Client\SetTargetC02.cs" />
+    <Compile Include="Net\Packets\Client\TradeStartCFA1.cs" />
+    <Compile Include="Net\Packets\PacketsHandler.cs" />
+    <Compile Include="Net\Packets\Client\ClientContainerC22.cs" />
+    <Compile Include="Net\Packets\Client\BaseClientPacket.cs" />
+    <Compile Include="Net\Packets\Client\ClientContainerC25.cs" />
+    <Compile Include="Net\Packets\GamePacket.cs" />
+    <Compile Include="IO\LittleEndianBitConverter.cs" />
+    <Compile Include="IO\MarshallerException.cs" />
+    <Compile Include="Net\GameServer.cs" />
+    <Compile Include="Net\Packets\PacketEventArgs.cs" />
+    <Compile Include="Net\Packets\PacketGroup.cs" />
+    <Compile Include="Net\Packets\PacketEventHandler.cs" />
+    <Compile Include="Net\Packets\PacketsProcessor.cs" />
+    <Compile Include="Net\Packets\PacketsRegistry.cs" />
+    <Compile Include="Net\Packets\PacketType.cs" />
+    <Compile Include="Net\Packets\PacketIdentifier.cs" />
+    <Compile Include="Net\Packets\Server\AnnounceForbidInfoS7B.cs" />
+    <Compile Include="Net\Packets\Server\BaseServerPacket.cs" />
+    <Compile Include="Net\Packets\Server\BattleChallengeMap_ReS357.cs" />
+    <Compile Include="Net\Packets\Server\CreateRole_ReS55.cs" />
+    <Compile Include="Net\Packets\Server\FriendFormRefresh_ReS3B8.cs" />
+    <Compile Include="Net\Packets\Server\GetGuildBaseInfo_ReS12CF.cs" />
+    <Compile Include="Net\Packets\Server\GetRoleIdByName_ReS77.cs" />
+    <Compile Include="Net\Packets\Server\GuildMessageS12C3.cs" />
+    <Compile Include="Net\Packets\Server\InvalidTargetSC2.cs" />
+    <Compile Include="Net\Packets\Server\JoinTheGuildS1199.cs" />
+    <Compile Include="Net\Packets\Server\LocalMessageS50.cs" />
+    <Compile Include="Net\Packets\Server\LoginErrorS05.cs" />
+    <Compile Include="Net\Packets\Server\NpcGreetingS46.cs" />
+    <Compile Include="Net\Packets\Server\PShopList_ReS39F.cs" />
+    <Compile Include="Net\Packets\Server\PShopPlayerGet_ReS39D.cs" />
+    <Compile Include="Net\Packets\Server\ResetTargetReS27.cs" />
+    <Compile Include="Net\Packets\Server\KeepAliveS5A.cs" />
+    <Compile Include="Net\Packets\Server\LastLoginInfoS8F.cs" />
+    <Compile Include="Net\Packets\Server\GetPlayerGuildInfo_ReS12D1.cs" />
+    <Compile Include="Net\Packets\Server\NpcTargetInfoS21.cs" />
+    <Compile Include="Net\Packets\Server\ObjectLeaveS0D_13_14_15.cs" />
+    <Compile Include="Net\Packets\Server\NpcEnterS0B_10.cs" />
+    <Compile Include="Net\Packets\Server\NpcListS09.cs" />
+    <Compile Include="Net\Packets\Server\ObjectMoveS0F.cs" />
+    <Compile Include="Net\Packets\Server\OnlineAnnounceS04.cs" />
+    <Compile Include="Net\Packets\Server\PlayerPositionS08.cs" />
+    <Compile Include="Net\Packets\Server\RolesListS04.cs" />
+    <Compile Include="Net\Packets\Server\RoleBaseInfoS5C.cs" />
+    <Compile Include="Net\Packets\Server\RoleEnterS0C_11.cs" />
+    <Compile Include="Net\Packets\Server\RoleList_ReS53.cs" />
+    <Compile Include="Net\Packets\Server\RoleLogoutS45.cs" />
+    <Compile Include="Net\Packets\Server\SearchFriendsResponseS3BB.cs" />
+    <Compile Include="Net\Packets\Server\SelectRole_ReS47.cs" />
+    <Compile Include="Net\Packets\Server\SelectTargetReS34.cs" />
+    <Compile Include="Net\Packets\Server\ServerContainerS00.cs" />
+    <Compile Include="Net\Packets\Server\ServerInfoS01.cs" />
+    <Compile Include="Net\Packets\Server\SMKeyS02.cs" />
+    <Compile Include="Net\Packets\Server\SMKeyS03.cs" />
+    <Compile Include="Net\Packets\Server\TargetInfoS20.cs" />
+    <Compile Include="Net\Packets\Server\TradeStart_ReSFA2.cs" />
+    <Compile Include="Net\Packets\Server\WorldChatS85.cs" />
+    <Compile Include="Net\Plugin.cs" />
+    <Compile Include="Net\PluginManager.cs" />
+    <Compile Include="Net\Plugins\AccountRolesPlugin.cs" />
+    <Compile Include="Net\Plugins\AuthPlugin.cs" />
+    <Compile Include="Net\Plugins\PShop.cs" />
+    <Compile Include="Net\Plugins\EmuPlugin.cs" />
+    <Compile Include="Net\Plugins\GCAuthPlugin.cs" />
+    <Compile Include="Net\Plugins\GameCenter\GCAuth.cs" />
+    <Compile Include="Net\Plugins\GameCenter\GCAuthData.cs" />
+    <Compile Include="Net\Plugins\GameCenter\GCWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Net\Plugins\GameCenter\PWAccount.cs" />
+    <Compile Include="Net\Plugins\KeepAlivePlugin.cs" />
+    <Compile Include="Net\Plugins\RolesPoolPlugin.cs" />
+    <Compile Include="Net\Plugins\RandomRolesPlugin.cs" />
+    <Compile Include="Net\Plugins\ReloginPlugin.cs" />
+    <Compile Include="Net\Plugins\RolesInfoRequesterPlugin.cs" />
+    <Compile Include="Net\Plugins\RolesSwitcherPlugin.cs" />
+    <Compile Include="Net\Plugins\TargetPlugin.cs" />
+    <Compile Include="Net\Plugins\TwinkListPlugin.cs" />
+    <Compile Include="Net\Plugins\WorldEnteringPlugin.cs" />
+    <Compile Include="Net\Security\MD5Hash.cs" />
+    <Compile Include="Net\Security\MppcUnpucker.cs" />
+    <Compile Include="Net\Security\Rc4Encryption.cs" />
+    <Compile Include="Net\SocketFactory.cs" />
+    <Compile Include="IO\VersionControl.cs" />
+    <Compile Include="OOGHost.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Threading\ActionTimer.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
